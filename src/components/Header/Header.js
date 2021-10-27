@@ -16,7 +16,7 @@ const Header = () => {
                 <NavLink to="/inventory">Manage Inventory</NavLink>
                 {user.email && <span style={{ color: 'white' }}>Hello {user.displayName} </span>}
                 {
-                    user.email ?
+                    user.email || user.displayName ?
                         <button onClick={logOut}>log out</button>
                         :
                         <NavLink to="/login">Login</NavLink>}
